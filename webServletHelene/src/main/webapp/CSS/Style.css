@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#ref {
+	color:red;
+}
+
+header { 
+	height: 200px;
+	background-color: red;
+}
+
+.contener {
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 10%; 
+	margin-top: 10%;
+	height: 200px;
+	
+}
