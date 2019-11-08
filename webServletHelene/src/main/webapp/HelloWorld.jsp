@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List"%>
 <%@ page import="fr.formation.inti.entities.Fiche"%>
@@ -37,9 +37,9 @@
 			<c:forEach items="${patient}" var="p">
 				<tbody>
 					<tr>
-						<td>${p.pId }</td>
-						<td>${p.nom }</td>
-						<td>${p.prenom }</td>
+						<td>${p.pId}</td>
+						<td>${p.nom}</td>
+						<td>${p.prenom}</td>
 						<td><form action="delete" method="post">
 								<input type="hidden" name="deleteId" value="${p.pId}"> <input
 									type="submit" value="X" title="delete" id="delete"

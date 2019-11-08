@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List"%>
 <%@ page import="fr.formation.inti.entities.Fiche"%>
@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/Style.css">
 <meta charset="ISO-8859-1">
-<title>Fiches</title>
+<title>Fiche</title>
 </head>
 <body>
 	<header></header>
@@ -29,36 +29,21 @@
 		<table width=300px id="myTable"class="table table-bordered table-striped table-hover">
 			<thead>
 				<tr>
-					<th scope="col">Id</th>
 					<th scope="col">Nom</th>
 					<th scope="col">Prenom</th>
+					<th scope="col">Date de rendez-vous</th>
+					<th scope="col">Poids (kg)</th>
 				</tr>
 			</thead>
-			<c:forEach begin="0" end="${patient.nom}" varStatus="loop">
-  				  ${patient.headings[loop.index]}
-				<%-- <tbody>
+			<c:forEach items="${patientView}" var="pv">
+				<tbody>
 					<tr>
-						<td>${p.pId }</td>
-						<td>${p.nom }</td>
-						<td>${p.prenom }</td>
-						<td><form action="delete" method="post">
-								<input type="hidden" name="deleteId" value="${p.pId}"> <input
-									type="submit" value="X" title="delete" id="delete"
-									onclick="return confirm('Voulez-vous supprimer Mr/Mme ${p.nom } ${p.prenom }')">
-							</form>
-							
-							<form action="view" method="post">
-								<input type="hidden" name="viewFiche" value="${p.pId}"> <input
-									type="submit" value="F" title="viewFiche" id="viewFiche">
-							</form>
-							
-							<form action="add" method="post">
-								<input type="hidden" name="addFiche" value="${p.pId}"> <input
-									type="submit" value="+" title="addFiche" id="addFiche">
-							</form>
-						</td>  
+						<td>${pv.nom}</td>
+						<td>${pv.prenom}</td>
+						<td>${pv.dateRdv}</td>
+						<td>${pv.poids}</td> 
 					</tr>
-				</tbody> --%>
+				</tbody>
 			</c:forEach>
 		</table>
 	</div>
