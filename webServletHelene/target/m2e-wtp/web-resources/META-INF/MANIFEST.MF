@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: cbecuwe
-Build-Jdk: 13
+Built-By: cleme
+Build-Jdk: 1.8.0_201
 Created-By: Maven Integration for Eclipse
 

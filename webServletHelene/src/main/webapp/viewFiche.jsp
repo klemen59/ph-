@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/Style.css">
 <meta charset="ISO-8859-1">
-<title>Page d'accueil</title>
+<title>Fiches</title>
 </head>
 <body>
 	<header></header>
@@ -34,8 +34,9 @@
 					<th scope="col">Prenom</th>
 				</tr>
 			</thead>
-			<c:forEach items="${patient}" var="p">
-				<tbody>
+			<c:forEach begin="0" end="${patient.nom}" varStatus="loop">
+  				  ${patient.headings[loop.index]}
+				<%-- <tbody>
 					<tr>
 						<td>${p.pId }</td>
 						<td>${p.nom }</td>
@@ -57,7 +58,7 @@
 							</form>
 						</td>  
 					</tr>
-				</tbody>
+				</tbody> --%>
 			</c:forEach>
 		</table>
 	</div>

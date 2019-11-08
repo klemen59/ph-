@@ -30,12 +30,12 @@ import fr.formation.inti.utils.Constants;
 /**
  * Servlet implementation class EmployeeServlet
  */
-@WebServlet("/helllo")
+@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
 	private static final Log log = LogFactory.getLog(HelloServlet.class);
 	private static final long serialVersionUID = 1L;
 	
-	FicheService serviceF = new FicheService();
+	PatientService service = new PatientService();
 
 
 	/**
@@ -54,8 +54,8 @@ public class HelloServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		
-		List<Fiche> fiche = serviceF.findAll();
-		request.setAttribute("fiche", fiche);
+		List<Patient> patient = service.findAll();
+		request.setAttribute("patient", patient);
 		request.getRequestDispatcher("/HelloWorld.jsp").forward(request, response);
 	}
 

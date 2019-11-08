@@ -37,6 +37,7 @@ public class FicheService {
         dao.closeCurrentSession();
         return fiche;
     }
+    
  
     public void delete(Integer id) {
         dao.openCurrentSessionwithTransaction();
